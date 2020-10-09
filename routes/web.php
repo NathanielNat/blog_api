@@ -13,6 +13,14 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+// $router->get('/', function () use ($router) {
+//     return $router->app->version();
+// });
+
+
+$router->get('/','BlogController@index');
+$router->post('/blogs','BlogController@store');
+$router->get('/blogs/{blog}','BlogController@show');
+$router->put('/blogs/{blog}','BlogController@update');
+$router->patch('/blogs/{blog}','BlogController@update');
+$router->delete('/blogs{blog}','BlogController@destroy');
