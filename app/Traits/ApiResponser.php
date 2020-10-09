@@ -23,7 +23,7 @@ trait ApiResponser{
     * @param int $code
     * @return Illumninate\Http\JsonResponse
     */
-    public function errorResponses($message,$code){
+    public function errorResponse($message,$code){
         return \response()->json(['error'=>$message,'code' => $code],$code);
     }
 
