@@ -55,6 +55,7 @@ class BlogController extends Controller
     public function show($blog){
         $blog = Blog::FindorFail($blog);
         return response()->json(['data' => $blog],Response::HTTP_OK);
+    
     } 
     
     /**

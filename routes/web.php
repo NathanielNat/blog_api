@@ -19,6 +19,7 @@
 
 
 $router->get('/','BlogController@index');
+$router->get('/blogs','BlogController@index');
 $router->post('/blogs','BlogController@store');
 $router->get('/blogs/{blog}','BlogController@show');
 $router->put('/blogs/{blog}','BlogController@update');
